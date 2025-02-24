@@ -6,6 +6,8 @@ import java.awt.*;
 public class Main {
 
     public static void main(String[] args) {
+        Font font = new Font("Arial" , Font.BOLD , 15);
+
         // Create and configure the main frame
         JFrame frame = new JFrame("survey form");
         frame.setSize(600, 600);
@@ -20,9 +22,15 @@ public class Main {
 
         // Create title label
         JLabel title = new JLabel("survey form");
+        // Create start button
+        JButton startButton = new JButton("Start!");
+        title.setBounds(10, 10, 100, 20);
+        title.setFont(font);
 
         // Create start button
         JButton startButton = new JButton("Start!");
+        startButton.setBounds(10, 40, 100, 20);
+        startButton.setFont(font);
 
         // Add components to the panel
         panel.add(title, BorderLayout.NORTH);

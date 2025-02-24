@@ -17,11 +17,13 @@ public class Main {
 
         // Create and configure the main panel
         JPanel panel = new JPanel();
-        panel.setLayout(null);
+        panel.setLayout(new BorderLayout());
         panel.setBounds(0, 0, 600, 600);
 
         // Create title label
         JLabel title = new JLabel("survey form");
+        // Create start button
+        JButton startButton = new JButton("Start!");
         title.setBounds(10, 10, 100, 20);
         title.setFont(font);
 
@@ -31,8 +33,8 @@ public class Main {
         startButton.setFont(font);
 
         // Add components to the panel
-        panel.add(title);
-        panel.add(startButton);
+        panel.add(title, BorderLayout.NORTH);
+        panel.add(startButton, BorderLayout.CENTER);
 
         // Add panel to the frame
         frame.add(panel);
